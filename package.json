@@ -16,6 +16,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.9.7",
+    "tslint-config-standard": "^8.0.1",
     "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
