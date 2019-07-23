@@ -45,17 +45,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "App",
   mounted() {
     let cp = this.$route.path;
     if (cp == "/") {
-      document.getElementById("r0").classList.add("button");
-      document.getElementById("r0").classList.add("is-link");
+      document.getElementById("r0")!.classList.add("button");
+      document.getElementById("r0")!.classList.add("is-link");
     }else{
-      document.getElementById(cp.split("/")[1]).classList.add("button");
-      document.getElementById(cp.split("/")[1]).classList.add("is-link");
+      document.getElementById(cp.split("/")[1])!.classList.add("button");
+      document.getElementById(cp.split("/")[1])!.classList.add("is-link");
     }
   }
 };
