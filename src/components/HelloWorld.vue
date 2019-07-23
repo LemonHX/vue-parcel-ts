@@ -1,20 +1,86 @@
 <template>
-  <div class="hello-world">
-    <h1>您好在下LemonHX🍋! 您当前的路由是: {{current_route}}</h1>
-    <hr />
-    <h3>如果这个界面工作正常,那能证明至少我是对的🎊‍</h3>
-    <h3>为什么使用Parcel和Yarn🧶呢? 因为很简单很快啊🚆!</h3>
-    <h3>剩下的交给你了,好运🎉</h3>
+  <div id="back">
+    <div class="hello-world card">
+      <h1>您好在下LemonHX🍋! 您当前的路由是: {{current_route}}</h1>
+      <hr />
+      <h3>如果这个界面工作正常,那能证明至少我是对的🎊‍</h3>
+      <h3>为什么使用Parcel和Yarn🧶呢? 因为很简单很快啊🚆!</h3>
+      <h3>刚刚添加了Typescrip和vuex的支持!变得更加严格了呢!❄️</h3>
+      <h3>寒寒⛄推荐的Buefy真的挺漂亮的 🌸</h3>
+      <hr />
+
+      <b-collapse class="card" aria-id="contentIdForA11y3" style="margin:10%;">
+        <div
+          slot="trigger"
+          class="card-header"
+          role="button"
+          aria-controls="contentIdForA11y3"
+        >
+          <p class="card-header-title">Vuex计数器!</p>
+          <a class="card-header-icon">
+            <i class="fas fa-caret-down"></i>
+          </a>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <h3>当前计数: {{ count }}</h3>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a class="card-footer-item">🙃</a>
+          <a class="card-footer-item" @click="increment">➕</a>
+          <a class="card-footer-item" @click="decrement">➖</a>
+        </footer>
+      </b-collapse>
+      <hr>
+      <h3>剩下的交给你了,好运🎉</h3>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import store from "../storage/HelloStore";
 export default {
-  name: 'hello-world',
-  data:function(){
+  name: "hello-world",
+  computed: {
+    count() {
+      return store.state.count;
+    }
+  },
+  data: function() {
     return {
       current_route: this.$route.path.toString()
+    };
+  },
+  methods: {
+    increment() {
+      store.commit("increment");
+    },
+    decrement() {
+      store.commit("decrement");
     }
   }
-}
+};
 </script>
+
+<style scoped>
+.hello-world {
+  background-color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1em;
+}
+#back {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+h3{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+</style>

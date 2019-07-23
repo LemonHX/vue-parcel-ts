@@ -11,6 +11,7 @@
   "author": "LemonHX <lemonhx@lemonhx.tech>",
   "license": "STAT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "@vue/component-compiler-utils": "^2.1.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -18,9 +19,18 @@
     "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@types/vue": "^2.0.0",
+    "@types/vue-router": "^2.0.0",
     "babel-polyfill": "^6.26.0",
+    "buefy": "^0.7.10",
+    "sass": "^1.22.4",
+    "typescript": "^3.5.3",
     "vue": "^2.5.16",
     "vue-hot-reload-api": "^2.3.0",
-    "vue-router": "^3.0.7"
+    "vue-router": "^3.0.7",
+    "vuex": "^3.1.1"
   }
 }
