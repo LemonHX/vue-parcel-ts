@@ -47,7 +47,7 @@ export default {
       return store.state.count;
     }
   },
-  data: function() {
+  data(): object {
     return {
       current_route: this.$route.path.toString()
     };
