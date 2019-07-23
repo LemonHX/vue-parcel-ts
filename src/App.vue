@@ -8,7 +8,7 @@
           </a>
           <a href="https://github.com/lemonhx" title="Github" class="navbar-item has-text-dark">
             <span class="icon">
-              <i class="fas fa-github"></i>
+              <i class="fab fa-github"></i>
             </span>
           </a>
           <a
@@ -17,12 +17,12 @@
             class="navbar-item has-text-zhihu"
           >
             <span class="icon">
-              <i class="fas fa-zhihu"></i>
+              <i class="fab fa-zhihu"></i>
             </span>
           </a>
           <a href="https://twitter.com/runzhe2001" title="QQ" class="navbar-item has-text-QQ">
             <span class="icon">
-              <i class="fas fa-qq"></i>
+              <i class="fab fa-qq"></i>
             </span>
           </a>
           <span class="navbar-burger burger">
@@ -53,7 +53,7 @@ export default {
     if (cp == "/") {
       document.getElementById("r0")!.classList.add("button");
       document.getElementById("r0")!.classList.add("is-link");
-    }else{
+    } else {
       document.getElementById(cp.split("/")[1])!.classList.add("button");
       document.getElementById(cp.split("/")[1])!.classList.add("is-link");
     }
@@ -61,15 +61,11 @@ export default {
 };
 </script>
 
-
-<style scoped>
-#navbar {
-  width: 100%;
-}
-#mainframe {
-  height: 100%;
-}
-i {
-  font-size: 1.2em;
-}
+<style lang="sass" scoped>
+#navbar
+  width: 100%
+#mainframe
+  height: 100%
+i
+  font-size: 1.2em
 </style>

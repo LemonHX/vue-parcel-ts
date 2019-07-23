@@ -10,15 +10,10 @@
       <hr />
 
       <b-collapse class="card" aria-id="contentIdForA11y3" style="margin:10%;">
-        <div
-          slot="trigger"
-          class="card-header"
-          role="button"
-          aria-controls="contentIdForA11y3"
-        >
+        <div slot="trigger" class="card-header" role="button" aria-controls="contentIdForA11y3">
           <p class="card-header-title">Vuex计数器!</p>
           <a class="card-header-icon">
-            <i class="fas fa-caret-down"></i>
+            <i class="fab fa-caret-down"></i>
           </a>
         </div>
         <div class="card-content">
@@ -32,7 +27,7 @@
           <a class="card-footer-item" @click="decrement">➖</a>
         </footer>
       </b-collapse>
-      <hr>
+      <hr />
       <h3>剩下的交给你了,好运🎉</h3>
     </div>
   </div>
@@ -63,24 +58,23 @@ export default {
 };
 </script>
 
-<style scoped>
-.hello-world {
-  background-color: white;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 1em;
-}
-#back {
-  height: 100%;
-  width: 100%;
-}
-h1 {
-  font-size: 3em;
-  font-weight: bold;
-}
-h3{
-  font-size: 1.2em;
-  font-weight: bold;
-}
+<style lang="sass" scoped>
+.hello-world
+  background-color: white
+  width: 90%
+  margin-left: 5%
+  margin-right: 5%
+  padding: 1em
+
+#back
+  height: 100%
+  width: 100%
+
+h1
+  font-size: 3em
+  font-weight: bold
+
+h3
+  font-size: 1.2em
+  font-weight: bold
 </style>
