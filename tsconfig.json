@@ -1,12 +1,20 @@
 {
-    "compilerOptions": {
-      "experimentalDecorators": true,
-      "sourceMap": true,
-      "strict": true,
-      "noImplicitReturns": true,
-      "module": "es2015",
-      "moduleResolution": "node",
-      "target": "es5"
-    },
-    "include": ["./src/**/*"]
-  }
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es5"
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.js",
+    "node_modules"
+  ]
+}
