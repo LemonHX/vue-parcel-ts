@@ -28,6 +28,7 @@
     "babel-polyfill": "^6.26.0",
     "buefy": "^0.7.10",
     "sass": "^1.22.4",
+    "tslint": "^5.18.0",
     "typescript": "^3.5.3",
     "typescript-tslint-plugin": "^0.5.4",
     "vue": "^2.5.16",
