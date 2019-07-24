@@ -1,23 +1,22 @@
-import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue } from '@vue/test-utils'
+// @ts-ignore
 import HelloWorld from '../src/components/HelloWorld.vue'
-import VueRouter from 'vue-router'
+import Buefy from 'buefy'
 
 const localVue = createLocalVue()
-localVue.use(VueRouter)
-
-shallowMount(HelloWorld, {
-    localVue
+localVue.use(Buefy, {
+    defaultIconComponent: 'vue-fontawesome',
+    defaultIconPack: 'fas'
 })
-
-var $route = {
-    path: '/'
-}
 
 describe('helloworld', () => {
     test('这是一个普通的<del>高中生</del>', () => {
-        const wrapper = shallowMount(HelloWorld, {
+        const wrapper = mount(HelloWorld, {
+            localVue,
             mocks: {
-                $route
+                $route: {
+                    path: '/'
+                }
             }
         })
         // expect(wrapper.isVueInstance()).toBeTruthy()
