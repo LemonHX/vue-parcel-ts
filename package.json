@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "jest"
   },
   "keywords": [],
   "author": "LemonHX <lemonhx@lemonhx.tech>",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "@vue/component-compiler-utils": "^2.1.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.9.7",
@@ -23,17 +25,45 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@types/jest": "^24.0.15",
     "@types/vue": "^2.0.0",
     "@types/vue-router": "^2.0.0",
+    "axios": "^0.19.0",
+    "babel-jest": "^24.8.0",
     "babel-polyfill": "^6.26.0",
     "buefy": "^0.7.10",
+    "jest": "^24.8.0",
     "sass": "^1.22.4",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
     "typescript-tslint-plugin": "^0.5.4",
     "vue": "^2.5.16",
     "vue-hot-reload-api": "^2.3.0",
+    "vue-jest": "^3.0.4",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,vue,ts}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.ts": "<rootDir>/node_modules/ts-jest"
+    }
   }
 }

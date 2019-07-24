@@ -4,6 +4,7 @@
   "linterOptions": {
     "exclude": [
       "**/*.test.js",
+      "**/*.spec.ts",
       "**/node_modules/**/*"
     ]
   },
