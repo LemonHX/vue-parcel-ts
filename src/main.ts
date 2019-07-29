@@ -4,14 +4,13 @@ import App from './App.vue'
 
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import '@mdi/font/scss/materialdesignicons.scss'
 import '@fortawesome/fontawesome-free/css/all.css'
-Vue.component('vue-fontawesome', FontAwesomeIcon)
+import 'animate.css/animate.min.css'
 Vue.config.productionTip = false
 
 Vue.use(Buefy, {
-  defaultIconComponent: 'vue-fontawesome',
-  defaultIconPack: 'fas'
+  defaultIconPack: 'mdi'
 })
 
 let _ = new Vue({

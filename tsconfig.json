@@ -19,7 +19,10 @@
   ],
   "exclude": [
     "**/*.test.ts",
+    "**/*.spec.ts",
     "**/*.test.js",
+    "**/*.spec.js",
+    "dist",
     "node_modules"
   ]
 }
